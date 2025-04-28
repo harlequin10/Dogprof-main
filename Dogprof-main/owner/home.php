@@ -14,8 +14,9 @@ include 'read.php';
 
 <div class="sidebar">
     <h2 style="text-align:center;">PAWKEDEX</h2>
-    <a href="#" class="active">All Pets</a>
-    <a href="#">Your Pet Dogs</a>
+    <a href="" class="active">All Pets</a>
+    <a href="home.php">Your Pet Dogs</a>
+    <a href="logout.php">Logout</a>
 </div>
 
 <div class="content">
