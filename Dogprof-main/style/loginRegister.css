@@ -1,0 +1,434 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('../images/download.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.nav {
+    position: absolute; /* Keeping original positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 1px solid black;
+    height: 60px;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(42, 37, 33, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.85;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Elements */
+input, select {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 15px;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Add paw print to button */
+button::after {
+    content: '';
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23333' d='M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z'/></svg>");
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Links */
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Header */
+.header {
+    position: absolute; /* Keeping original positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login-btn {
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #FFC925;
+    color: white;
+    border-color: #FFC925;
+    transform: translateY(-2px);
+    opacity: 0.75;
+}
+
+/* About Section */
+.about {
+    color: rgba(0, 0, 0, 0.741);
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-size: x-large;
+    padding-right: 70px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Register Hover */
+.register:hover {
+    background-color: #FFC61A;
+    color: #f0f0f0;
+}
+
+/* Password Container */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Homepage Specific */
+.pawsup {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    padding: 80px;
+    z-index: 10;
+    max-width: 50%;
+}
+
+.pawsup h1 {
+    font-size: 3rem;
+    margin-bottom: -15px;
+    color: #333;
+}
+
+.pawsup h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    color: #333;
+}
+
+.sign {
+    margin-top: 3%;
+    margin-bottom: -6px;
+}
+
+/* Signup Button */
+.signup-button {
+    margin-top: -35px;
+    position: relative;
+}
+
+.signup-button button {
+    background: url('../images/dogbone.png') no-repeat center center;
+    background-size: 100px;
+    width: 300px;
+    height: 300px;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+    right: 7%;
+    margin-top: 8%;
+    transition: transform 0.3s ease;
+}
+
+.signup-button button:hover {
+    transform: translateY(-3px);
+}
+
+.signup-button button span {
+    transform: translateY(5px);
+    display: inline-block;
+}
+
+.signup-button button:after {
+    content: '';
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23333' d='M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z'/></svg>");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 53%;
+    transform: translateY(-50%);
+}
+
+/* Puppy image */
+.puppy-image {
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+    width: 35%;
+    max-width: 450px;
+    z-index: 5;
+}
+
+/* Responsive adjustments while preserving original placement */
+@media (max-width: 1200px) {
+    .pawsup {
+        left: 15%;
+        padding: 60px;
+    }
+    
+    .puppy-image {
+        right: 15%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .pawsup {
+        left: 10%;
+        padding: 40px;
+    }
+    
+    .pawsup h1 {
+        font-size: 2.5rem;
+    }
+    
+    .pawsup h3 {
+        font-size: 1.3rem;
+    }
+    
+    .signup-button button {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .puppy-image {
+        right: 10%;
+        bottom: 10%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 80px 20px 20px;
+    }
+    
+    .nav, .header {
+        padding: 10px 15px;
+    }
+    
+    .about {
+        padding-right: 20px;
+        font-size: large;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .login-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .pawsup {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 30px 10px;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .pawsup h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .pawsup h3 {
+        font-size: 1.2rem;
+    }
+    
+    .signup-button {
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .signup-button button {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        right: auto;
+    }
+    
+    .puppy-image {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .container {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .pawsup h1 {
+        font-size: 1.8rem;
+    }
+    
+    .pawsup h3 {
+        font-size: 1rem;
+    }
+    
+    .signup-button button {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    input, select, button {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+}
